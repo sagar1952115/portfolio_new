@@ -1,0 +1,208 @@
+.project-container {
+  color: white;
+}
+.project-title {
+  font-size: 5rem;
+  padding: 2rem 0;
+  text-align: center;
+  color: yellow;
+}
+.pitem-container {
+  display: flex;
+
+  margin: 3rem auto;
+  width: 85%;
+  /* border: 2px solid yellow; */
+  align-items: center;
+  justify-content: center;
+}
+.pitem-index {
+  /* flex: 1; */
+  display: flex;
+  font-size: 4rem;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  border: 2px solid yellow;
+  width: 5rem;
+  height: 5rem;
+  font-weight: 100;
+  /* padding: 2rem; */
+}
+.pitem-img {
+  /* flex: 5; */
+  width: 30rem;
+  height: 22rem;
+  /* border: 2px solid red; */
+  /* background-color: green; */
+  /* margin: 1rem; */
+}
+.pitem-img img {
+  width: 30rem;
+  min-height: 22rem;
+}
+.pitem-des {
+  /* flex: 5; */
+  width: 35rem;
+  /* border: 2px solid gray; */
+  height: 22rem;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    2px 0px 7px -2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  /* margin: 1rem; */
+}
+
+.pitem-title {
+  font-size: 3rem;
+  text-align: center;
+  padding: 1rem 0;
+  color: yellow;
+}
+.pitem-info {
+  padding: 1rem;
+}
+.pitem-tech-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.pitem-tech-list li {
+  background-color: yellow;
+  padding: 0.5rem;
+  font-weight: 600;
+  margin: 0.2rem;
+  border-radius: 0.2rem;
+}
+
+.pitem-btn {
+  display: flex;
+  padding: 0.7rem;
+}
+.pitem-github-btn {
+  /* color: white; */
+  outline: none;
+  font-weight: 800;
+  /* width: max-content; */
+  /* margin: 1rem;   */
+  border: none;
+  border-radius: 0.2rem;
+  background-color: red;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+.pitem-live-btn {
+  display: flex;
+  /* color: white; */
+  margin: 0.5rem;
+  border-radius: 0.2rem;
+  font-weight: 800;
+  outline: none;
+  border: none;
+  background-color: chocolate;
+  padding: 0.5rem;
+}
+/* .pitem-live-btn div {
+  width: 1rem;
+  height: 1rem;
+  background-color: green;
+  border-radius: 2rem;
+} */
+
+.led-yellow {
+  margin: 0 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: #ff0;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px,
+    #ff0 0 2px 12px;
+  -webkit-animation: blinkYellow 1s infinite;
+  -moz-animation: blinkYellow 1s infinite;
+  -ms-animation: blinkYellow 1s infinite;
+  -o-animation: blinkYellow 1s infinite;
+  animation: blinkYellow 1s infinite;
+}
+
+@-webkit-keyframes blinkYellow {
+  from {
+    background-color: #ff0;
+  }
+  50% {
+    background-color: #aa0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px,
+      #ff0 0 2px 0;
+  }
+  to {
+    background-color: #ff0;
+  }
+}
+@-moz-keyframes blinkYellow {
+  from {
+    background-color: #ff0;
+  }
+  50% {
+    background-color: #aa0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px,
+      #ff0 0 2px 0;
+  }
+  to {
+    background-color: #ff0;
+  }
+}
+@-ms-keyframes blinkYellow {
+  from {
+    background-color: #ff0;
+  }
+  50% {
+    background-color: #aa0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px,
+      #ff0 0 2px 0;
+  }
+  to {
+    background-color: #ff0;
+  }
+}
+@-o-keyframes blinkYellow {
+  from {
+    background-color: #ff0;
+  }
+  50% {
+    background-color: #aa0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px,
+      #ff0 0 2px 0;
+  }
+  to {
+    background-color: #ff0;
+  }
+}
+@keyframes blinkYellow {
+  from {
+    background-color: #ff0;
+  }
+  50% {
+    background-color: #aa0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px,
+      #ff0 0 0px 0;
+  }
+  to {
+    background-color: #ff0;
+  }
+}
+
+.led-red {
+  margin: 0 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: #ff0000;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #471d01 0 -1px 9px,
+    #ff5e00 0 2px 12px;
+}
+
+.none {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}

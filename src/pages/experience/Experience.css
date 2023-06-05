@@ -1,0 +1,114 @@
+.exp-title {
+  color: yellow;
+  font-size: 5rem;
+  padding: 3rem;
+  text-align: center;
+}
+
+.experience-timeline-item {
+  display: flex;
+  /* border: 2px solid green; */
+  justify-content: flex-end;
+  position: relative;
+  /* padding-right: 30px; */
+  width: 48%;
+  margin: 10px 0;
+}
+.experience-timeline-item:nth-child(odd) {
+  align-self: flex-end;
+  justify-content: flex-start;
+  padding-left: 30px;
+  padding-right: 0;
+}
+.experience-timeline-item-content {
+  /* border: 2px solid yellow; */
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  padding: 15px;
+  width: 30rem;
+  max-width: 80%;
+  text-align: right;
+}
+
+.experience-timeline-item-content::after {
+  content: " ";
+  background-color: white;
+  box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: -7.5px;
+  top: calc(50% - 7.5px);
+  transform: rotate(45deg);
+  width: 15px;
+  height: 15px;
+}
+.experience-timeline-item:nth-child(odd) .experience-timeline-item-content {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.experience-timeline-item:nth-child(odd)
+  .experience-timeline-item-content::after {
+  right: auto;
+  left: -7.5px;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.experience-timeline-item-content time {
+  color: #777;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.experience-timeline-item-content .circle {
+  background-color: white;
+  border: 3px solid yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 10px);
+  right: -40px;
+  width: 20px;
+  height: 20px;
+  z-index: 100;
+}
+
+.experience-timeline-item:nth-child(odd)
+  .experience-timeline-item-content
+  .circle {
+  right: auto;
+  left: -40px;
+}
+
+.res {
+  font-size: 0.9rem;
+  color: #777;
+  text-align: justify;
+  /* border: 2px solid red; */
+  margin: 0.5rem 0;
+}
+.org {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  /* border: 2px solid green; */
+  margin: 0.5rem 0 0;
+}
+.desig {
+  /* border: 2px solid red; */
+  margin: 0;
+  font-size: 0.8rem;
+  color: yellow;
+}
+.tech {
+  font-size: 0.9rem;
+  text-align: left;
+}
+.org a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}

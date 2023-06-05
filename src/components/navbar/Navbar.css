@@ -1,0 +1,27 @@
+.navbar-container {
+  position: fixed;
+  top: 5rem;
+  /* bottom: 0; */
+  display: flex;
+  width: 30%;
+  transform: translateX(315%) rotate(90deg);
+
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-weight: 800;
+  background-color: transparent;
+  /* transform: translate(0%, 0%) rotate(-90deg); */
+  /* transform: rotate(-90deg); */
+  transform-origin: bottom left;
+  z-index: 999;
+}
+.navbar-element {
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+.none {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}

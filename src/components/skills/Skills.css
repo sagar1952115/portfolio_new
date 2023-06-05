@@ -1,0 +1,41 @@
+.skill-container {
+  margin: 6rem 0 3rem 0;
+  color: white;
+}
+.skill-title {
+  text-align: center;
+  font-size: 3rem;
+  color: yellow;
+}
+.skill-options {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  /* border: 2px solid red; */
+  cursor: pointer;
+}
+.skill {
+  width: 15rem;
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  /* border: 1px solid red; */
+}
+.skill-icons {
+  /* border: 1px solid red; */
+  text-align: center;
+  width: 70%;
+  margin: auto;
+}
+.skill-icon {
+  transform: scale(6);
+  margin: 5rem;
+}
+.active {
+  color: yellow;
+  transition: 0.3s;
+  /* border-bottom: 2px solid yellow; */
+}
