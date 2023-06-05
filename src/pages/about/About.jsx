@@ -8,7 +8,6 @@ import { FaDownload } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { SiLeetcode } from "react-icons/si";
-import { BsMenuButtonWideFill } from "react-icons/bs";
 const About = () => {
   return (
     <div>

@@ -1,11 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import "./Contact.css";
-import {
-  FaEnvelope,
-  FaLocationArrow,
-  FaPhone,
-  FaSearchLocation,
-} from "react-icons/fa";
+import { FaEnvelope, FaPhone } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import { TiLocation } from "react-icons/ti";
 import { Link } from "react-router-dom";
@@ -100,6 +95,7 @@ const Contact = () => {
                 rows="5"
                 placeholder="Write your queries here"
               ></textarea>
+              {/* eslint-disable-next-line */}
               <a href="#" onClick={sendEmail} className="animated-button2">
                 <span></span>
                 <span></span>

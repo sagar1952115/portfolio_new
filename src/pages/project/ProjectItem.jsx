@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Project.css";
 
 import { FaLink } from "react-icons/fa";
-import { DiVisualstudio } from "react-icons/di";
 const ProjectItem = ({ data }) => {
   console.log(data.tech);
   return (
@@ -48,7 +47,5 @@ const ProjectItem = ({ data }) => {
     </div>
   );
 };
-{
-}
 
 export default ProjectItem;
