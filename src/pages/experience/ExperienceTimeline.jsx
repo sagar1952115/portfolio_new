@@ -1,5 +1,4 @@
 import React from "react";
-import ProjectItem from "../project/ProjectItem";
 
 import "./Experience.css";
 
