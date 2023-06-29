@@ -85,6 +85,9 @@ span {
   padding: 1rem;
   color: white;
 }
+.hfooter-left p {
+  margin: 1.2rem 0;
+}
 @media (min-width: 320px) and (max-width: 480px) {
   .homepage-container {
     width: 100vw;
@@ -134,9 +137,6 @@ span {
 
   .hfooter-right {
     justify-content: space-between;
-  }
-  .hfooter-left p {
-    margin: 1.2rem 0;
   }
 }
 /* @media (min-width: 1920px) {
