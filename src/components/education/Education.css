@@ -4,131 +4,102 @@
 }
 .education-title {
   text-align: center;
-  color: yellow;
+  color: var(--main-color);
   font-size: 3rem;
+}
+
+.college {
+  position: relative;
+}
+.timeline-container {
+  width: max-content;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+/* Timeline dot  */
+.college::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  border: 3px solid var(--main-color);
+}
+.college {
+  color: var(--main-color);
+  margin: 0.5rem 0;
+  font-size: 2rem;
+}
+.deg {
+  font-size: 1.3rem;
+  color: rgba(197, 204, 171, 0.829);
+}
+.course {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: white;
+  font-style: italic;
+}
+time {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* text right if the experience-card is even  */
+.timeline-card:nth-child(even) > .timeline-info > .college {
+  text-align: right;
+}
+.timeline-card:nth-child(even) > .timeline-info > .deg {
+  text-align: right;
+}
+.timeline-card:nth-child(even) > .timeline-info > time {
+  text-align: right;
+}
+.timeline-card:nth-child(even) > .timeline-info > .course {
+  text-align: right;
+}
+
+/* setting dot to the left if the experience-card is odd */
+.timeline-card:nth-child(odd) > .timeline-info > .college::before {
+  left: -45px;
+}
+
+/* setting dot to the right if the experience-card is odd */
+.timeline-card:nth-child(even) > .timeline-info > .college::before {
+  right: -45px;
 }
 
 /* fdfghjkjhgfghjk */
 
-.timeline-container {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin: 40px 0;
-}
-
-.timeline-container::after {
-  background-color: yellow;
-  content: "";
-  position: absolute;
-  left: calc(50% - 2px);
-  width: 4px;
-  height: 100%;
-}
-
-.timeline-item {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 30px;
-  position: relative;
-  margin: 10px 0;
-  width: 48%;
-}
-
-.timeline-item:nth-child(odd) {
-  align-self: flex-end;
-  justify-content: flex-start;
-  padding-left: 30px;
-  padding-right: 0;
-}
-
-.timeline-item-content {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding: 15px;
-  position: relative;
-  width: 400px;
-  max-width: 70%;
-  text-align: right;
-}
-
-.timeline-item-content::after {
-  content: " ";
-  background-color: #fff;
-  box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  right: -7.5px;
-  top: calc(50% - 7.5px);
-  transform: rotate(45deg);
-  width: 15px;
-  height: 15px;
-}
-
-.timeline-item:nth-child(odd) .timeline-item-content {
-  text-align: left;
-  align-items: flex-start;
-}
-
-.timeline-item:nth-child(odd) .timeline-item-content::after {
-  right: auto;
-  left: -7.5px;
-  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-.timeline-item-content time {
-  color: #777;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.timeline-item-content .circle {
-  background-color: white;
-  border: 3px solid yellow;
-  border-radius: 50%;
-  position: absolute;
-  top: calc(50% - 10px);
-  right: -39px;
-  width: 20px;
-  height: 20px;
-  z-index: 100;
-}
-
-.timeline-item:nth-child(odd) .timeline-item-content .circle {
-  right: auto;
-  left: -38px;
-}
-
-.timeline-item-content .college {
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 0px;
-}
-.timeline-item-content .deg {
-  font-size: 0.8rem;
-  line-height: 0px;
-}
-.timeline-item-content .course {
-  line-height: 0px;
-}
-@media only screen and (max-width: 1023px) {
-  .timeline-item-content {
-    max-width: 100%;
+@media (min-width: 320px) and (max-width: 480px) {
+  .education-container {
+    margin: 3rem 0 2rem 0;
   }
-}
-
-@media only screen and (max-width: 767px) {
-  .timeline-item-content,
-  .timeline-item:nth-child(odd) .timeline-item-content {
-    padding: 15px 10px;
-    text-align: center;
-    align-items: center;
+  .education-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
   }
-
-  .timeline-item-content time {
-    margin-top: 20px;
+  .college {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+  .deg {
+    font-size: 0.8rem;
+    color: rgba(197, 204, 171, 0.829);
+  }
+  .course {
+    margin: 0.5rem 0;
+    font-size: 0.7rem;
+  }
+  time {
+    margin: 0.5rem 0 !important;
+    font-size: 0.7rem !important;
+  }
+  .timeline-container {
+    width: max-content;
+    padding: 0px;
+    margin: 10px auto;
   }
 }

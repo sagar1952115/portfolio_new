@@ -5,7 +5,7 @@
 .skill-title {
   text-align: center;
   font-size: 3rem;
-  color: yellow;
+  color: var(--main-color);
 }
 .skill-options {
   display: flex;
@@ -35,7 +35,38 @@
   margin: 5rem;
 }
 .active {
-  color: yellow;
+  color: var(--main-color);
   transition: 0.3s;
   /* border-bottom: 2px solid yellow; */
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .skill-container {
+    margin: 2rem 0 1rem 0;
+  }
+  .skill-title {
+    font-size: 1.5rem;
+  }
+  .skill-options {
+    margin: 0 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .skill {
+    /* border: 1px solid red; */
+    text-align: center;
+    margin: 0rem;
+    padding: 1rem;
+    /* border: 1px solid red; */
+  }
+  .skill-icons {
+    /* border: 1px solid red; */
+    text-align: center;
+    width: 100%;
+    margin: auto;
+  }
+  .skill-icon {
+    transform: scale(3);
+    margin: 2rem;
+  }
 }

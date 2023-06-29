@@ -5,7 +5,7 @@
   font-size: 5rem;
   padding: 2rem 0;
   text-align: center;
-  color: yellow;
+  color: var(--main-color);
 }
 .pitem-container {
   display: flex;
@@ -23,7 +23,7 @@
   align-items: center;
   justify-content: center;
   margin: 1rem;
-  border: 2px solid yellow;
+  border: 2px solid var(--main-color);
   width: 5rem;
   height: 5rem;
   font-weight: 100;
@@ -55,7 +55,7 @@
   font-size: 3rem;
   text-align: center;
   padding: 1rem 0;
-  color: yellow;
+  color: var(--main-color);
 }
 .pitem-info {
   padding: 1rem;
@@ -69,7 +69,7 @@
   /* justify-content: center; */
 }
 .pitem-tech-list li {
-  background-color: #d3d307;
+  background-color: var(--main-color);
   padding: 0.5rem;
   font-weight: 600;
   margin: 0.2rem;
@@ -205,4 +205,55 @@
   text-decoration: none;
   color: white;
   cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .project-container {
+    position: absolute;
+    top: 5rem;
+  }
+  .project-title {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    margin-left: 1rem;
+    /* color: yellow; */
+  }
+  .pitem-container {
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    margin: 3rem auto;
+    width: 85%;
+    height: max-content;
+    /* border: 2px solid yellow; */
+    align-items: center;
+    /* justify-content: center; */
+  }
+  .pitem-index {
+    /* flex: 1; */
+    font-size: 3rem;
+    border: 2px solid var(--main-color);
+    width: 4rem;
+    height: 4rem;
+  }
+  .pitem-img {
+    width: 100%;
+    height: 12rem;
+    /* border: 3px solid red; */
+    /* height: 10rem; */
+  }
+  .pitem-img img {
+    /* border: 1px solid green; */
+    width: 100%;
+    min-height: 12rem;
+    height: 12rem;
+  }
+  .pitem-des {
+    /* flex: 5; */
+    width: 100%;
+    height: max-content;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+      2px 0px 7px -2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  }
 }

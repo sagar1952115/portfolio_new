@@ -14,10 +14,12 @@ const Experience = () => {
           </p>
         </Link>
         {data.length > 0 && (
-          <div className="timeline-container">
-            {data.map((data, idx) => (
-              <ExperienceTimeline data={data} key={idx} />
-            ))}
+          <div className="experience-timeline">
+            <div className="experience-outer">
+              {data.map((data, idx) => (
+                <ExperienceTimeline data={data} key={idx} />
+              ))}
+            </div>
           </div>
         )}
       </div>

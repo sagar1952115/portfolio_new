@@ -1,114 +1,189 @@
 .exp-title {
-  color: yellow;
+  color: var(--main-color);
   font-size: 5rem;
   padding: 3rem;
   text-align: center;
 }
 
-.experience-timeline-item {
+.experience-timeline {
   display: flex;
-  /* border: 2px solid green; */
-  justify-content: flex-end;
+  justify-content: center;
+  /* background: var(--primary-color); */
+  margin: 20px auto;
+  padding: 20px;
+}
+.timeline-card {
   position: relative;
-  /* padding-right: 30px; */
-  width: 48%;
-  margin: 10px 0;
+  max-width: 800px;
 }
-.experience-timeline-item:nth-child(odd) {
-  align-self: flex-end;
-  justify-content: flex-start;
-  padding-left: 30px;
-  padding-right: 0;
+.timeline-card:nth-child(odd) {
+  padding: 30px 0 30px 30px;
 }
-.experience-timeline-item-content {
-  /* border: 2px solid yellow; */
-  background-color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
+.timeline-card:nth-child(even) {
+  padding: 30px 30px 30px 0;
+}
+/* Global ::before */
+.timeline-card::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  border: solid var(--main-color);
+}
+
+/* Setting the border of top, bottom, left */
+.timeline-card:nth-child(odd)::before {
+  left: 0px;
+  top: -4.5px;
+  bottom: -4.5px;
+  border-width: 5px 0 5px 5px;
+  border-radius: 50px 0 0 50px;
+}
+
+/* Setting the border of top, bottom, right */
+.timeline-card:nth-child(even)::before {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-width: 5px 5px 5px 0;
+  border-radius: 0 50px 50px 0;
+}
+
+/* Removing the border if it is the first experience-card */
+.timeline-card:first-child::before {
+  border-top: 0;
+  border-top-left-radius: 0;
+}
+
+/* Removing the border if it is the last experience-card  and it's odd */
+.timeline-card:last-child:nth-child(odd)::before {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Removing the border if it is the last experience-card  and it's even */
+.timeline-card:last-child:nth-child(even)::before {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Information about the timeline */
+.timeline-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  background: #333;
+  color: gray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Title of the experience-card */
+.org {
   position: relative;
-  padding: 15px;
-  width: 30rem;
-  max-width: 80%;
+}
+
+/* Timeline dot  */
+.org::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  border: 3px solid var(--main-color);
+}
+
+/* text right if the experience-card is even  */
+.timeline-card:nth-child(even) > .timeline-info > .org {
+  text-align: right;
+}
+.timeline-card:nth-child(even) > .timeline-info > .desig {
+  text-align: right;
+}
+.timeline-card:nth-child(even) > .timeline-info > time {
   text-align: right;
 }
 
-.experience-timeline-item-content::after {
-  content: " ";
-  background-color: white;
-  box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  right: -7.5px;
-  top: calc(50% - 7.5px);
-  transform: rotate(45deg);
-  width: 15px;
-  height: 15px;
-}
-.experience-timeline-item:nth-child(odd) .experience-timeline-item-content {
-  text-align: left;
-  align-items: flex-start;
+/* setting dot to the left if the experience-card is odd */
+.timeline-card:nth-child(odd) > .timeline-info > .org::before {
+  left: -45px;
 }
 
-.experience-timeline-item:nth-child(odd)
-  .experience-timeline-item-content::after {
-  right: auto;
-  left: -7.5px;
-  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-.experience-timeline-item-content time {
-  color: #777;
-  font-size: 12px;
-  font-weight: bold;
+/* setting dot to the right if the experience-card is odd */
+.timeline-card:nth-child(even) > .timeline-info > .org::before {
+  right: -45px;
 }
 
-.experience-timeline-item-content .circle {
-  background-color: white;
-  border: 3px solid yellow;
-  border-radius: 50%;
-  position: absolute;
-  top: calc(50% - 10px);
-  right: -39px;
-  width: 20px;
-  height: 20px;
-  z-index: 100;
+.org a {
+  color: var(--main-color);
+  font-size: 3rem;
 }
-
-.experience-timeline-item:nth-child(odd)
-  .experience-timeline-item-content
-  .circle {
-  right: auto;
-  left: -38px;
-}
-
-.res {
-  font-size: 0.9rem;
-  color: #777;
-  text-align: justify;
-  /* border: 2px solid red; */
-  margin: 0.5rem 0;
-}
-.org {
-  font-size: 1.5rem;
-  font-weight: 500;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-  /* border: 2px solid green; */
-  margin: 0.5rem 0 0;
+.intern-desc {
+  color: white;
 }
 .desig {
-  /* border: 2px solid red; */
-  margin: 0;
-  font-size: 0.8rem;
-  color: yellow;
+  color: rgba(197, 204, 171, 0.829);
+  font-size: 2rem;
+  margin: 0.5rem 0;
 }
-.tech {
-  font-size: 0.9rem;
-  text-align: left;
+.intern-tech {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 1rem 0;
 }
-.org a {
-  text-decoration: none;
-  color: black;
-  cursor: pointer;
+.intern-tech li {
+  background-color: var(--main-color);
+  margin: 0.5rem;
+  color: white;
+  padding: 0.6rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  list-style: none;
+}
+.intern-desc li {
+  /* margin-left: 0; */
+  margin: 10px 20px;
+  text-indent: -20px;
+  padding-left: 1rem;
+  /* list-style-position: outside; */
+}
+/* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
+@media (min-width: 320px) and (max-width: 480px) {
+  .exp-title {
+    font-size: 2rem;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+  .timeline-card:nth-child(odd)::before {
+    top: -5px;
+    bottom: -5px;
+  }
+  .timeline-card {
+    position: relative;
+    max-width: 280px;
+  }
+  .org a {
+    font-size: 1.8rem;
+  }
+  .intern-desc {
+    font-size: 0.8rem;
+  }
+  .desig {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+  }
+  .intern-desc li {
+    margin: 10px 5px;
+  }
+  .intern-tech li {
+    margin: 0.2rem;
+    padding: 0.4rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-radius: 0.2rem;
+    list-style: none;
+  }
+  time {
+    font-size: 0.9rem;
+  }
 }

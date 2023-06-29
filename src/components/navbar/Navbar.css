@@ -25,3 +25,8 @@
   cursor: pointer;
   text-decoration: none;
 }
+@media (min-width: 320px) and (max-width: 480px) {
+  .navbar-container {
+    transform: translateX(300%) rotate(90deg);
+  }
+}

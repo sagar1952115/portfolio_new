@@ -11,7 +11,7 @@ body {
 .about-title {
   font-size: 5rem;
   padding: 5rem;
-  color: yellow;
+  color: var(--main-color);
   text-align: center;
 }
 .about-content {
@@ -191,7 +191,7 @@ body {
 
 .acontent-parent {
   position: relative;
-  background-color: yellow;
+  background-color: var(--main-color);
   width: 25rem;
   height: 30rem;
   border-radius: 1rem;
@@ -210,4 +210,55 @@ body {
   position: fixed;
   top: 10rem;
   left: 0;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .about-title {
+    font-size: 2rem;
+    padding: 4rem 0 2rem 0;
+  }
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red;      */
+  }
+  .acontent-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid green; */
+  }
+  .acontent-right {
+    width: 70%;
+    align-items: center;
+    /* border: 1px solid green; */
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .acontent-parent {
+    width: 15rem;
+    height: 20rem;
+    border-radius: 0.5rem;
+  }
+  .acontent-child img {
+    top: 1rem;
+    left: 1rem;
+    border-radius: 0.5rem;
+    width: 15rem;
+    height: 20rem;
+    /* transform: scale(0.8); */
+  }
+  .about-footer {
+    position: absolute;
+    left: -2rem;
+  }
+  .animated-button2 {
+    padding: 10px 20px;
+    margin: 20px;
+  }
 }
