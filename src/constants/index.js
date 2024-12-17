@@ -101,7 +101,7 @@ export const myProjects = [
       'Developed with React.js, Tailwind CSS, Node.js, MongoDB, and Redis, ShortIt ensures high performance, scalability, and seamless user experience, making URL management simple and effective.',
     href: 'https://shrtt.netlify.app',
     texture: '/textures/project/sortit.mp4',
-    logo: '/assets/sortit/logo.png',
+    logo: '/assets/url/logo.svg',
     logoStyle: {
       backgroundColor: '#13202F',
       border: '0.2px solid #17293E',
